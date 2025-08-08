@@ -3,5 +3,7 @@ numpy
 matplotlib
 tqdm
 deep-sort-realtime
+torch
+torchvision
 
 

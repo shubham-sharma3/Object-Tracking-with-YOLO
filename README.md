@@ -1,3 +1,21 @@
 # Object-Tracking-with-YOLO
+This repository provides an implementation for **object detection** and **tracking** using the YOLOv3 and DeepSort.
 
-docker run --gpus all -it --rm -v $(pwd):/workspace yolov3_image
+## Build Docker Image
+From the root directory of the project:
+```bash
+docker build -t yolov3_image .
+```
+
+## Run the Container
+```bash
+docker run -it --rm -v $(pwd):/workspace yolov3_image
+```
+
+## Run Inference
+```bash
+python main.py
+```
+
+## Results
+Video of the tracking result saved in media file

@@ -9,12 +9,12 @@ docker build -t yolov3_image .
 
 ## Run the Container
 ```bash
-docker run -it --rm -v $(pwd):/workspace yolov3_image
+docker run -it yolov3_image
 ```
 
 ## Run Inference
 ```bash
-python main.py
+/usr/bin/python3 main.py
 ```
 
 ## Results

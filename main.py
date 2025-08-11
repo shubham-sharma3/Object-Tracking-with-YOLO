@@ -49,7 +49,7 @@ while True:
     if not ret:
         break
 
-    # ---- Detection ----
+    # Detection
     blob = cv2.dnn.blobFromImage(frame, 1 / 255, (608, 608), (0, 0, 0), True)
     net.setInput(blob)
     outputs = net.forward(output_layers)
@@ -71,7 +71,7 @@ while True:
                 confidences.append(float(confidence))
                 class_ids.append(class_id)
 
-    # ---- Tracking ----
+    # Tracking
     # detections_np = np.array([boxes[i] + [confidences[i]] for i in range(len(boxes))])
     indices = cv2.dnn.NMSBoxes(boxes, confidences, CONF_THRESHOLD, NMS_THRESHOLD)
 
